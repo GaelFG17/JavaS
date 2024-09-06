@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clon de Trello</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="board">
+        <div class="column" data-column="1">
+            <h2>Por Hacer</h2>
+            <div class="task-list" id="todo-list">
+                <!-- Las tareas se agregarán aquí -->
+            </div>
+            <input type="text" placeholder="Nueva tarea" class="new-task-input">
+            <button class="add-task-btn">Agregar Tarea</button>
+        </div>
+
+        <div class="column" data-column="2">
+            <h2>En Progreso</h2>
+            <div class="task-list" id="inprogress-list">
+                <!-- Las tareas se agregarán aquí -->
+            </div>
+        </div>
+
+        <div class="column" data-column="3">
+            <h2>Completado</h2>
+            <div class="task-list" id="done-list">
+                <!-- Las tareas se agregarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
