@@ -11,4 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             createNoteElement(note);
         });
     };
+
+    const saveNotes = (notes) => {
+        localStorage.setItem('notes', JSON.stringify(notes));
+    };
 })
