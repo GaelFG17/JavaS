@@ -38,4 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
             noteInput.value = '';
         }
     });
+
+    // Borrar notas
+    window.deleteNote = (btn) => {
+        const noteDiv = btn.parentElement;
+        const noteText = noteDiv.querySelector('p').textContent;
+        let notes = JSON.parse(localStorage.getItem('notes')) || [];
+        notes = notes.filter(note => note !== noteText);
+        saveNotes(notes);
+        noteDiv.remove();
+    };
+
+    loadNotes();
 })
