@@ -15,4 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveNotes = (notes) => {
         localStorage.setItem('notes', JSON.stringify(notes));
     };
+
+    // Crear notas
+    const createNoteElement = (text) => {
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'note';
+        noteDiv.innerHTML = `
+            <p>${text}</p>
+            <button onclick="deleteNote(this)">Eliminar</button>
+        `;
+        noteContainer.appendChild(noteDiv);
+    };
 })
