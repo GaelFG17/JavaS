@@ -26,4 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         noteContainer.appendChild(noteDiv);
     };
+
+    //ADD
+    addNoteBtn.addEventListener('click', () => {
+        const noteText = noteInput.value.trim();
+        if (noteText) {
+            const notes = JSON.parse(localStorage.getItem('notes')) || [];
+            notes.push(noteText);
+            saveNotes(notes);
+            createNoteElement(noteText);
+            noteInput.value = '';
+        }
+    });
 })
