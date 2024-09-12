@@ -4,3 +4,13 @@
     gap: 10px;
     margin: 20px;
 }
+
+.gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
