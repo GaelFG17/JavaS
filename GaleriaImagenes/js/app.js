@@ -14,3 +14,9 @@ document.querySelectorAll('.gallery img').forEach(img => {
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
+
+modal.addEventListener('click', (e) => {
+    if (e.target !== modalImg) {
+        modal.style.display = 'none';
+    }
+});
