@@ -3,4 +3,9 @@ function generatePassword() {
     const includeUppercase = document.getElementById('uppercase').checked;
     const includeNumbers = document.getElementById('numbers').checked;
     const includeSymbols = document.getElementById('symbols').checked;
+
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numbers = '0123456789';
+    const symbols = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
 }
