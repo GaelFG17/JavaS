@@ -8,4 +8,9 @@ function generatePassword() {
     const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const numbers = '0123456789';
     const symbols = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+
+    let characters = lowercase;
+    if (includeUppercase) characters += uppercase;
+    if (includeNumbers) characters += numbers;
+    if (includeSymbols) characters += symbols;
 }
