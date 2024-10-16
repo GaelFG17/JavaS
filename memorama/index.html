@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .memory-game {
+            width: 640px;
+            height: 640px;
+            display: flex;
+            flex-wrap: wrap;
+            perspective: 1000px;
+        }
+        .memory-card {
+            width: calc(25% - 10px);
+            height: calc(25% - 10px);
+            margin: 5px;
+            position: relative;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .memory-card:active {
+            transform: scale(0.97);
+            transition: transform 0.2s;
+        }
+        .memory-card.flip {
+            transform: rotateY(180deg);
+        }
+        .front-face,
+        .back-face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 5px;
+        }
+        .front-face {
+            background: #fff;
+        }
+        .back-face {
+            background: #1c7ccc;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="memory-game">
+        <!-- Memory cards will be added here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
